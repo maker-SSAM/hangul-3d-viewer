@@ -2,6 +2,11 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <!-- 예전 GitHub Pages 주소(maker-ssam.github.io)로 들어온 방문자를 새 대표 주소
+         (easy3d.web.app)로 자동 이동시킨다 — 두 도메인이 같은 브랜치를 그대로 서빙하고
+         있어서, 안 그러면 방문자/다운로드 카운트가 두 주소에 나뉘어 잡힌다. 다른 리소스
+         로딩 전 최대한 일찍 실행되도록 <head> 맨 위에 둔다. -->
+    <script>(function(){if(location.hostname==='maker-ssam.github.io'){location.replace('https://easy3d.web.app'+location.pathname.replace(/^\/easy3d/,'')+location.search+location.hash);}})();</script>
     <!-- 모바일에서 실제 기기 폭 기준으로 레이아웃을 잡게 한다(index.html과 동일한 이유). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 다크모드 첫 페인트 전 적용(깜빡임 방지) — assets/js/theme-core.js의 로직과 동일하되,
