@@ -16,6 +16,17 @@
     <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
     <script>(function(){var l=localStorage.getItem('lang')||'ko';document.documentElement.setAttribute('data-lang',l);})();</script>
     <title data-i18n-en="Parametric Design Studio for Beginners">초보자를 위한 파라메트릭 디자인 스튜디오</title>
+    <!-- 카카오톡/페이스북 등에 링크를 공유했을 때 썸네일이 뜨게 하는 Open Graph 태그.
+         이게 없으면 크롤러가 참고할 이미지가 없어서 텍스트만 있는 링크로 표시된다
+         — 카카오톡 미리보기 크롤러는 JS를 실행하지 않으므로 정적 태그여야 한다. -->
+    <meta name="description" content="회원가입 없이, 로그인 없이, 수치만 조정하여 나만의 3D디자인을 만들고 파일로 내려받아요.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="초보자를 위한 파라메트릭 디자인 스튜디오">
+    <meta property="og:title" content="초보자를 위한 파라메트릭 디자인 스튜디오">
+    <meta property="og:description" content="회원가입 없이, 로그인 없이, 수치만 조정하여 나만의 3D디자인을 만들고 파일로 내려받아요.">
+    <meta property="og:image" content="https://easy3d.web.app/assets/images/og-image.png">
+    <meta property="og:url" content="https://easy3d.web.app/">
+    <meta name="twitter:card" content="summary_large_image">
     <script src="assets/js/theme-core.js"></script>
     <script src="assets/js/lang-core.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
