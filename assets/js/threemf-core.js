@@ -257,11 +257,13 @@ window.ThreeMFCore = (function () {
 
         // core.js의 exportSTL()과 동일한 다운로드 카운트 기록 — 이게 없으면 STL만 카운트되고
         // 3MF로 받은 다운로드는 갤러리 카드의 다운로드 배지에 전혀 반영되지 않는다.
+        // no_session: true 이유는 core.js의 exportSTL() 주석 참고.
         if (window.goatcounter && typeof window.goatcounter.count === 'function') {
             window.goatcounter.count({
                 path: 'download' + location.pathname,
                 title: document.title,
                 event: true,
+                no_session: true,
             });
         }
 

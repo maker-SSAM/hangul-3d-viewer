@@ -640,10 +640,14 @@ window.ParametricCore = (function () {
         if (!modelGroup) return;
 
         if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+            // no_session: true — GoatCounter는 기본적으로 같은 세션(사이트+브라우저+IP,
+            // 기본 8시간)에서 같은 path로 반복된 이벤트를 중복 제거해서 1회로만 센다.
+            // 다운로드는 같은 사람이 여러 번 받아도 매번 실제로 카운트되길 원하므로 꺼둔다.
             window.goatcounter.count({
                 path: 'download' + location.pathname,
                 title: document.title,
                 event: true,
+                no_session: true,
             });
         }
         // 화면 표시는 three.js 관례대로 Y-up으로 만드는데, 3D 프린트 슬라이서(큐라, 프루사슬라이서
